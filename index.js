@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const cookieParser = require('cookie-parser');
@@ -11,9 +13,9 @@ const { connectToMongoose } = require("./connect");
 const { checkForAuthentication, restrictTo  } = require("./Middlewares/auth");
 
 const app = express();
-const PORT = 8001;
+const PORT = process.env.port || 8000;
 
-connectToMongoose('mongodb://127.0.0.1:27017/short-url');
+connectToMongoose(process.env.MONGO_URL);
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve('./views'));
