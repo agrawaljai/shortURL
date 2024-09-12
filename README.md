@@ -1,7 +1,11 @@
 # shortURL
 A project on node.js to generate your own short url for a website or link.
 
-some key Implementations include:
+# Preview
+
+https://shorturl-y67w.onrender.com/
+
+# some key Implementations include:
 
 -Authorization
 
